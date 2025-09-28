@@ -33,7 +33,9 @@ if torch.cuda.is_available():
 # Load model & processor once per worker
 # (device_map="auto" requires `accelerate` to be installed)
 # ----------------------------
-processor = AutoProcessor.from_pretrained(MODEL_ID, trust_remote_code=True)
+processor = AutoProcessor.from_pretrained(
+    MODEL_ID, trust_remote_code=True, use_fast=False
+)
 
 model = LlavaForConditionalGeneration.from_pretrained(
     MODEL_ID,
