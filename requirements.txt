@@ -1,3 +1,4 @@
+numpy<2.0.0
 --extra-index-url https://download.pytorch.org/whl/cu121
 torch==2.2.2+cu121
 torchvision==0.17.2+cu121
@@ -6,3 +7,4 @@ accelerate>=0.33.0
 safetensors>=0.4.3
 Pillow>=10.4.0
 requests>=2.32.3
+runpod==1.6.2
